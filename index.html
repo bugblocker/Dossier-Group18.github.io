@@ -14,9 +14,29 @@ body {
 /* Header */
 header {
     background-color: #5bb6e6;
-    color: white;
     text-align: center;
     padding: 20px;
+}
+
+/* Shimmer effect */
+.shimmer {
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffffff, #ffe6f2, #ffffff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200%;
+    }
+    100% {
+        background-position: 200%;
+    }
+
 }
 
 /* Navigation bar */
