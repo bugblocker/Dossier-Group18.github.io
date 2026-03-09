@@ -1,21 +1,144 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
+<title>Specialization Dossier</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+body {
+    background-color: #d9f1ff;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #5bb6e6;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+/* Dropdown menu */
+.navbar {
+    background-color: #3a9fd1;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 18px;
+    text-decoration: none;
+}
+
+.navbar li a:hover, .dropdown:hover .dropbtn {
+    background-color: #2c7fa8;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e6f7ff;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #cfefff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Page sections */
+section {
+    padding: 25px;
+}
+</style>
 
 </head>
 
 <body>
 
-<body style="color:coral;"</body>
-
-
-<h1 style="color:red; padding:10px; text-decoration:underline;">Come, take a look!</h1>
-
+<header>
+<h1>Come, Take a Look!</h1>
 <p>This is Our Specialization Dossier!</p>
+</header>
 
+<div class="navbar">
+<ul>
 
+<li class="dropdown">
+<a href="#" class="dropbtn">Menu</a>
+<div class="dropdown-content">
+<a href="#overview">Overview</a>
+<a href="#tasks">Typical Tasks</a>
+<a href="#jobmarket">Job Market Outlook</a>
+<a href="#skills">Technical Skills</a>
+<a href="#training">Training Agenda</a>
+<a href="#labor">Labor Trends</a>
+<a href="#resources">Resources</a>
+</div>
+</li>
+
+</ul>
+</div>
+
+<section id="overview">
+<h2>Overview</h2>
+<p>Information about the specialization goes here.</p>
+</section>
+
+<section id="tasks">
+<h2>Typical Tasks</h2>
+<p>Describe the common tasks performed in this career.</p>
+</section>
+
+<section id="jobmarket">
+<h2>Job Market Outlook</h2>
+<p>Discuss job demand and employment outlook.</p>
+</section>
+
+<section id="skills">
+<h2>Technical Skills</h2>
+<p>List important technical skills needed.</p>
+</section>
+
+<section id="training">
+<h2>Training Agenda</h2>
+<p>Explain the training program or course outline.</p>
+</section>
+
+<section id="labor">
+<h2>Labor Trends</h2>
+<p>Include information about labor market trends.</p>
+</section>
+
+<section id="resources">
+<h2>Resources</h2>
+<p>Add helpful links, tools, or references.</p>
+</section>
+
+</body>
 </html>
