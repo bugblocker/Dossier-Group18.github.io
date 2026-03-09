@@ -9,6 +9,7 @@ body {
     background-color: #ffd6e7;
     font-family: Arial, sans-serif;
     margin: 0;
+    color: brown; /* All text default to brown */
 }
 
 /* Header */
@@ -17,14 +18,14 @@ header {
     text-align: center;
     padding: 30px;
     position: relative;
-    color: brown;
+    color: brown; /* Header text (subtitle & team names) brown */
 }
 
 /* Fancy animated title */
 .fancy-title {
     font-size: 40px;
     font-weight: bold;
-    background: linear-gradient(90deg, #ffffff, #ffe6f5, #ffffff);
+    background: linear-gradient(90deg, #c0c0c0, #e6e6e6, #c0c0c0); /* silver gradient */
     background-size: 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -37,14 +38,10 @@ header {
     100% {background-position: 200%;}
 }
 
-/* Glow animation */
+/* Glow animation for silver shimmer */
 @keyframes glow {
-    from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #ffd1e6;
-    }
-    to {
-        text-shadow: 0 0 15px #fff, 0 0 25px #ffc0dd;
-    }
+    from {text-shadow: 0 0 5px #c0c0c0, 0 0 10px #e6e6e6;}
+    to {text-shadow: 0 0 15px #c0c0c0, 0 0 25px #e6e6e6;}
 }
 
 /* Sparkles */
@@ -52,7 +49,7 @@ header {
     position: absolute;
     width: 6px;
     height: 6px;
-    background: silver;
+    background: white;
     border-radius: 50%;
     animation: sparkleMove 4s infinite;
 }
@@ -68,15 +65,18 @@ header {
     100% {opacity:0; transform:scale(0);}
 }
 
-/* Navigation bar */
+/* Sticky navigation bar */
 .navbar {
     background-color: #3a9fd1;
     display: flex;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar a {
-    color: brown;
+    color: white;
     padding: 14px 18px;
     text-decoration: none;
     font-weight: bold;
@@ -86,9 +86,27 @@ header {
     background-color: #2c7fa8;
 }
 
-/* Sections */
+/* Section cards */
 section {
-    padding: 30px;
+    background: white;
+    margin: 30px auto;
+    padding: 25px;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Subtitle and team names */
+.subtitle {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.team-names {
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 5px;
 }
 </style>
 
@@ -100,10 +118,8 @@ section {
 
 <h1 class="fancy-title">Come, Take a Look!</h1>
 
-<p>
-This is Our Specialization Dossier!<br>
-Aliya Gomaa, Amanda Clark, Emma Cameron, and Patricia Alvarado
-</p>
+<p class="subtitle">This is Our Specialization Dossier!</p>
+<p class="team-names">Aliya Gomaa, Amanda Clark, Emma Cameron, and Patricia Alvarado</p>
 
 <div class="sparkle"></div>
 <div class="sparkle"></div>
