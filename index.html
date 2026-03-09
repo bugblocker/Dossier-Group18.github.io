@@ -15,28 +15,57 @@ body {
 header {
     background-color: #5bb6e6;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    position: relative;
+    color: white;
 }
 
-/* Shimmer effect */
-.shimmer {
-    font-size: 36px;
+/* Fancy animated title */
+.fancy-title {
+    font-size: 40px;
     font-weight: bold;
-    background: linear-gradient(90deg, #ffffff, #ffe6f2, #ffffff);
-    background-size: 200%;
+    background: linear-gradient(90deg, #ffffff, #ffe6f5, #ffffff);
+    background-size: 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shimmer 3s infinite linear;
+    animation: shimmer 3s infinite linear, glow 2s infinite alternate;
 }
 
+/* Shimmer animation */
 @keyframes shimmer {
-    0% {
-        background-position: -200%;
-    }
-    100% {
-        background-position: 200%;
-    }
+    0% {background-position: -200%;}
+    100% {background-position: 200%;}
+}
 
+/* Glow animation */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #ffd1e6;
+    }
+    to {
+        text-shadow: 0 0 15px #fff, 0 0 25px #ffc0dd;
+    }
+}
+
+/* Sparkles */
+.sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    animation: sparkleMove 4s infinite;
+}
+
+.sparkle:nth-child(1) { top:20%; left:30%; animation-delay:0s; }
+.sparkle:nth-child(2) { top:40%; left:60%; animation-delay:1s; }
+.sparkle:nth-child(3) { top:70%; left:40%; animation-delay:2s; }
+.sparkle:nth-child(4) { top:50%; left:20%; animation-delay:3s; }
+
+@keyframes sparkleMove {
+    0% {opacity:0; transform:scale(0);}
+    50% {opacity:1; transform:scale(1.5);}
+    100% {opacity:0; transform:scale(0);}
 }
 
 /* Navigation bar */
@@ -68,9 +97,19 @@ section {
 <body>
 
 <header>
-<h1>Come, Take a Look!</h1>
-<p1>This is Our Specialization Dossier!</p1>
-<p2>Amanda Clark, Aliya Gomaa, Emma Cameron, and Patricia Alvarado</p2>
+
+<h1 class="fancy-title">Come, Take a Look!</h1>
+
+<p>
+This is Our Specialization Dossier!<br>
+Aliya Gomaa, Amanda Clark, Emma Cameron, and Patricia Alvarado
+</p>
+
+<div class="sparkle"></div>
+<div class="sparkle"></div>
+<div class="sparkle"></div>
+<div class="sparkle"></div>
+
 </header>
 
 <div class="navbar">
