@@ -1,292 +1,342 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<title>Specialization Dossier</title>
+  <meta charset="UTF-8">
+  <title>Specialization Dossier</title>
+  <style>
+    /* ------------------- Global ------------------- */
+    html {
+      scroll-behavior: smooth;
+    }
 
-<style>
+    body {
+      background-color: #ffd6e7;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: brown;
+    }
 
-html{
-scroll-behavior:smooth;
-}
+    /* ------------------- Sidebar ------------------- */
+    .navbar {
+      background-color: #3a9fd1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 220px;
+      padding: 20px 10px;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
 
-body{
-background-color:#ffd6e7;
-font-family:Arial, sans-serif;
-margin:0;
-color:brown;
-}
+    .navbar a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      white-space: normal;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      transition: all 0.25s ease;
+    }
 
-/* Header */
+    .navbar a:hover {
+      background-color: #2c7fa8;
+      transform: translateX(4px);
+    }
 
-header {
-    background-color: #5bb6e6;
-    text-align: center;
-    padding: 30px;
-    position: relative;
-    color: brown;
-    margin-left: 220px; /* same as sidebar width */
-}
+    .navbar a:active {
+      transform: translateX(0);
+    }
 
+    .navbar a:focus {
+      outline: 3px solid white;
+      outline-offset: 2px;
+    }
 
-/* Fancy animated title */
+    /* ------------------- Main Content Wrapper ------------------- */
+    .main-content {
+      margin-left: 220px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.fancy-title {
-    font-size: 40px;
-    font-weight: bold;
-    background: linear-gradient(90deg, #ff00ff, #ff66ff, #ff00ff);
-    background-size: 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 3s infinite linear, glow 2s infinite alternate;
-    display: inline-block; /* makes centering more reliable */
-}
+    /* ------------------- Header ------------------- */
+    header {
+      background-color: #5bb6e6;
+      text-align: center;
+      padding: 30px;
+      color: brown;
+      width: 100%;
+      border-radius: 12px;
+      position: relative;
+    }
 
-@keyframes shimmer{
-0%{background-position:-200%;}
-100%{background-position:200%;}
-}
+    /* Fancy title with sparkles */
+    .fancy-title-container {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
 
-@keyframes glow{
-from{text-shadow:0 0 5px #ff00ff,0 0 10px #ff66ff;}
-to{text-shadow:0 0 15px #ff00ff,0 0 25px #ff66ff;}
-}
+    .fancy-title {
+      font-size: 40px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ff00ff, #ff66ff, #ff00ff);
+      background-size: 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s infinite linear, glow 2s infinite alternate;
+      display: inline-block;
+    }
 
-/* Sparkles */
+    @keyframes shimmer {
+      0% {
+        background-position: -200%;
+      }
 
-.sparkle {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: white;
-    border-radius: 50%;
-    animation: sparkleMove 4s infinite;
-}
+      100% {
+        background-position: 200%;
+      }
+    }
 
-.sparkle:nth-child(1) { top: 20%; left: calc(30% + 220px); animation-delay: 0s; }
-.sparkle:nth-child(2) { top: 40%; left: calc(60% + 220px); animation-delay: 1s; }
-.sparkle:nth-child(3) { top: 70%; left: calc(40% + 220px); animation-delay: 2s; }
-.sparkle:nth-child(4) { top: 50%; left: calc(20% + 220px); animation-delay: 3s; }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff66ff;
+      }
 
-@keyframes sparkleMove{
-0%{opacity:0;transform:scale(0);}
-50%{opacity:1;transform:scale(1.5);}
-100%{opacity:0;transform:scale(0);}
-}
+      to {
+        text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff66ff;
+      }
+    }
 
-/* Sticky navigation bar */
+    .sparkle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      animation: sparkleMove 4s infinite;
+    }
 
-/* Vertical left sidebar */
-.navbar {
-    background-color: #3a9fd1;
-    display: flex;
-    flex-direction: column;  /* vertical layout */
-    align-items: flex-start; /* align links to left */
-    position: fixed;         /* stick to left side */
-    top: 0;
-    left: 0;
-    height: 100vh;           /* full viewport height */
-    width: 200px;            /* adjust as needed */
-    padding: 20px 10px;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;        /* no scrolling */
-    z-index: 1000;
-}
+    .sparkle:nth-child(2) {
+      top: 0%;
+      left: 10%;
+      animation-delay: 0s;
+    }
 
-.navbar a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    font-weight: bold;
-    white-space: normal;     /* allow wrapping if needed */
-    border-radius: 6px;
-    margin-bottom: 8px;      /* spacing between links */
-    transition: all 0.25s ease;
-}
+    .sparkle:nth-child(3) {
+      top: 20%;
+      left: 50%;
+      animation-delay: 1s;
+    }
 
-.navbar a:hover {
-    background-color: #2c7fa8;
-    transform: translateX(4px); /* subtle shift on hover */
-}
+    .sparkle:nth-child(4) {
+      top: 10%;
+      left: 80%;
+      animation-delay: 2s;
+    }
 
-.navbar a:active {
-    transform: translateX(0);
-}
+    .sparkle:nth-child(5) {
+      top: 30%;
+      left: 30%;
+      animation-delay: 3s;
+    }
 
-.navbar a:focus {
-    outline: 3px solid white;
-    outline-offset: 2px;
-}
+    @keyframes sparkleMove {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
 
-/* Push main content to the right so it doesn’t overlap the sidebar */
-body > header,
-body > section,
-body > footer {
-    margin-left: 220px; /* sidebar width + some gap */
-}
+      50% {
+        opacity: 1;
+        transform: scale(1.5);
+      }
 
-/* Section cards */
+      100% {
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
 
-section {
-    background: white;
-    margin: 30px auto;
-    padding: 25px;
-    width: calc(80% - 220px);  /* shrink width to account for sidebar */
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    scroll-margin-top: 80px;
-}
+    .subtitle {
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
 
-/* Timeline image */
+    .team-names {
+      font-size: 16px;
+      font-style: italic;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
 
-.timeline-img {
-    width: 70%;
-    max-width: 700px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-    background-color: #ffe6f0;
-    padding: 10px;
-}
+    .class-name {
+      font-size: 16px;
+      margin-top: 5px;
+    }
 
-/* Subtitle and team names */
+    /* ------------------- Sections ------------------- */
+    section {
+      background: white;
+      padding: 25px;
+      margin: 30px 0;
+      width: 80%;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      scroll-margin-top: 80px;
+    }
 
-.subtitle{
-font-size:20px;
-margin-top:10px;
-margin-bottom:5px;
-}
+    /* ------------------- Timeline Image ------------------- */
+    .timeline-img {
+      width: 70%;
+      max-width: 700px;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+      background-color: #ffe6f0;
+      padding: 10px;
+    }
 
-.team-names{
-font-size:16px;
-font-style:italic;
-margin-top:5px;
-margin-bottom:5px;
-}
+    /* ------------------- About Grid ------------------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      justify-items: center;
+      margin-top: 20px;
+    }
 
-.class-name{
-font-size:16px;
-margin-top:5px;
-}
+    .about-grid figure {
+      text-align: center;
+      margin: 0;
+    }
 
-/* About Us grid */
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive */
-    gap: 25px;
-    justify-items: center;
-    margin-top: 20px;
-}
+    .about-grid img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #ff66cc;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.about-grid figure{
-text-align:center;
-margin:0;
-}
+    .about-grid figcaption {
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: bold;
+    }
 
-.about-grid img{
-width:250px;
-height:250px;
-object-fit:cover;
-border-radius:50%;
-border:4px solid #ff66cc;
-transition:transform 0.3s ease, box-shadow 0.3s ease;
-}
+    /* ------------------- Footer ------------------- */
+    footer {
+      background-color: #3a9fd1;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 30px;
+    }
 
-.about-grid figcaption{
-margin-top:10px;
-font-size:15px;
-font-weight:bold;
-}
+    /* ------------------- Tables ------------------- */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      text-align: center;
+    }
 
-/* Footer */
+    th,
+    td {
+      border: 1px solid black;
+      padding: 8px;
+    }
 
-footer {
-    background-color: #3a9fd1;
-    color: white;
-    text-align: center;
-    padding: 15px 10px;
-    margin-top: auto;
-    font-size: 14px;
-    margin-left: 220px; /* shift for sidebar */
-}
+    tr:nth-child(even) {
+      background-color: #e6f2ff;
+    }
 
-/* Tables */
+    /* ------------------- Bibliography ------------------- */
+    .bibliography {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+      color: brown;
+    }
 
-table{
-border-collapse:collapse;
-width:100%;
-text-align:center;
-}
+    .bibliography h3 {
+      text-align: center;
+    }
 
-th,td{
-border:1px solid black;
-padding:8px;
-}
+    .bibliography .citation {
+      margin-top: 20px;
+      text-indent: -0.5in;
+      padding-left: 0.5in;
+    }
 
-tr:nth-child(even){
-background-color:#e6f2ff;
-}
-
-/* Bibliography */
-
-.bibliography {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    max-width: calc(800px - 220px);
-    margin: auto;
-    color: brown;
-}
-
-.bibliography h3{
-text-align:center;
-}
-
-.bibliography .citation{
-margin-top:20px;
-text-indent:-0.5in;
-padding-left:0.5in;
-}
-
-.bibliography .annotation{
-text-indent:0;
-margin-top:5px;
-}
-
-</style>
+    .bibliography .annotation {
+      text-indent: 0;
+      margin-top: 5px;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="#overview">Overview</a>
+    <a href="#tasks">Typical Tasks</a>
+    <a href="#context">Professional Context</a>
+    <a href="#jobmarket">Job Market Outlook</a>
+    <a href="#skills">Technical Skills</a>
+    <a href="#training">Training Agenda</a>
+    <a href="#labor">Labor Trends</a>
+    <a href="#presentation">Our Presentation</a>
+    <a href="#interview">Interview Process</a>
+    <a href="#resources">Resources</a>
+    <a href="#about-us">About Us</a>
+  </nav>
 
-<h1 class="fancy-title">Come, Take a Look!</h1>
+  <div class="main-content">
+    <header>
+      <div class="fancy-title-container">
+        <h1 class="fancy-title">Come, Take a Look!</h1>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+      </div>
 
-<p class="subtitle">This is Our Specialization Dossier!</p>
-<p class="team-names">Aliya Gomaa, Amanda Clark, Emma Cameron, and Patricia Alvarado</p>
-<p class="class-name">IS 270 - Winter 2026</p>
+      <p class="subtitle">This is Our Specialization Dossier!</p>
+      <p class="team-names">Aliya Gomaa, Amanda Clark, Emma Cameron, and Patricia Alvarado</p>
+      <p class="class-name">IS 270 - Winter 2026</p>
+    </header>
 
-<div class="sparkle"></div>
-<div class="sparkle"></div>
-<div class="sparkle"></div>
-<div class="sparkle"></div>
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>Section content goes here...</p>
+    </section>
 
-</header>
+    <section id="tasks">
+      <h2>Typical Tasks</h2>
+      <p>Section content goes here...</p>
+    </section>
 
-<nav class="navbar" aria-label="Main navigation">
-<a href="#overview">Overview</a>
-<a href="#tasks">Typical Tasks</a>
-<a href="#context">Professional Context</a>
-<a href="#jobmarket">Job Market Outlook</a>
-<a href="#skills">Technical Skills</a>
-<a href="#training">Training Agenda</a>
-<a href="#labor">Labor Trends</a>
-<a href="#presentation">Our Presentation</a>
-<a href="#interview">Interview Process</a>
-<a href="#resources">Resources</a>
-<a href="#about-us">About Us</a>
-</nav>
+    <footer>
+      <p>© 2026 Specialization Dossier Team</p>
+    </footer>
+  </div>
 
 <section id="overview">
 <h2>Overview</h2>
