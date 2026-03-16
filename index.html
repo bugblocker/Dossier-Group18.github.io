@@ -5,11 +5,6 @@
 <title>Specialization Dossier</title>
 
 <style>
-
-html{
-scroll-behavior:smooth;
-}
-
 body {
     background-color: #ffd6e7;
     font-family: Arial, sans-serif;
@@ -18,7 +13,6 @@ body {
 }
 
 /* Header */
-
 header {
     background-color: #5bb6e6;
     text-align: center;
@@ -28,7 +22,6 @@ header {
 }
 
 /* Fancy animated title */
-
 .fancy-title {
     font-size: 40px;
     font-weight: bold;
@@ -50,7 +43,6 @@ header {
 }
 
 /* Sparkles */
-
 .sparkle {
     position: absolute;
     width: 6px;
@@ -71,37 +63,28 @@ header {
     100% {opacity:0; transform:scale(0);}
 }
 
-/* Sticky navigation */
-
+/* Sticky navigation bar */
 .navbar {
     background-color: #3a9fd1;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: nowrap;
     position: sticky;
     top: 0;
     z-index: 1000;
-    overflow-x: auto;
 }
 
 .navbar a {
     color: white;
-    padding: 12px 14px;
+    padding: 12px 12px;
     text-decoration: none;
     font-weight: bold;
-    white-space: nowrap;
-    transition: background-color 0.25s, transform 0.15s;
 }
 
 .navbar a:hover {
     background-color: #2c7fa8;
-    transform: translateY(-2px);
 }
 
-/* Sections */
-
+/* Section cards */
 section {
     background: white;
     margin: 30px auto;
@@ -111,64 +94,65 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* Timeline image */
-
-.timeline-img{
-width:100%;
-height:auto;
-display:block;
-margin:20px auto;
-border-radius:8px;
-}
-
-/* Subtitle */
-
+/* Subtitle and team names */
 .subtitle {
     font-size: 20px;
     margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .team-names {
     font-size: 16px;
     font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .class-name {
-font-size:16px;
+font-size: 16px;
+margin-top: 5px;
 }
 
-/* About grid */
-
+/* About Us image grid */
 .about-grid {
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-justify-items:center;
-margin-top:20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    justify-items: center;
+    margin-top: 20px;
 }
 
-.about-grid figure{
-text-align:center;
-margin:0;
+.about-grid figure {
+    text-align: center;
+    margin: 0;
 }
 
-.about-grid img{
-width:250px;
-height:250px;
-object-fit:cover;
-border-radius:50%;
-border:4px solid #ff66cc;
+.about-grid img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ff66cc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
-footer{
-background-color:#3a9fd1;
-color:white;
-text-align:center;
-padding:15px;
-margin-top:40px;
+.about-grid figcaption {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
 }
-
+/* Footer */
+footer {
+    background-color: #3a9fd1;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: auto;
+    font-size: 14px;
+}
 </style>
+
 </head>
 
 <body>
@@ -205,127 +189,504 @@ margin-top:40px;
 <section id="overview">
 <h2>Overview</h2>
 <p>
-For our project we interviewed Ketzie Diaz, the Circulation Manager at the Peninsula Center branch of the Palos Verdes Library District (PVLD). She manages 22 employees responsible for circulation services including checkouts, book drops, shelving, and helping patrons sign up for library cards.
+    For our project we decided to interview Ketzie Diaz,the Circulation Manager at the Peninsula center branch of the Palos Verdes Library District (PVLD). Ketizie has been the circulation manager for this Library for about 12 years, In her role she is responsible for managing the 22 employees responsible for checking in/ checking out books, bookdrops, shelving, collecting holds, and assisting patrons sign up for library cards, additionally Ketize is also responsible for managing the integrated library system at the peninsula center, which is the database they use to keep track of all of patron accounts and library materials.  
+
+Palos Verdes Library District is a Special Library District governed by a board of trustees located in Palos Verdes, California. PVLD has three library branches, located across the Palos Verdes Peninsula, these branches are Malaga Cove, Miraleste, and the Peninsula Center, our interviewee, Ketzie is the circulation manager at the Peninsula center which happens to be the main branch. 
+
+The Palos Verdes Library District is formed in April 1928, The purpose of forming the special library district was to permit residents of unincorporated towns and villages to create for themselves an independent, locally controlled library district supported by property taxes and governed by a locally elected Board of Library Trustees responsive directly to the service needs of the community. 
+
+From 1928 up until 1967 the Malaga cove library was the library located in Palos Verdes, California. In 1967 the Peninsula Center was completed, and has served the community from then until now. 
+
+Currently the Peninsula center branch serves kids, teens, and adults through a wide variety of library materials and consistent programming. Some patron favorites at pvld are their wide video game selection, circulating telescopes, circulating camping gear, puzzles, weekly yoga, storytimes, and writers workshops. 
 </p>
 </section>
 
 <section id="tasks">
 <h2>Typical Tasks</h2>
-
+<p>Circulation Manager at PVLD
+Oversees a team of 22 people who:
 <ul>
 <li>Help patrons check out items</li>
 <li>Issue library cards</li>
-<li>Resolve account issues</li>
-<li>Empty book drops</li>
-<li>Reshelve materials</li>
+<li>Help patrons pay fines and resolve account issues</li>
+<li>Empty book drops, check items in, and reshelve materials</li>
+<li>Keep shelves organized, neat, and in order</li>   
+</ul>
+<br>
+Handles escalated patron issues:
+<ul>
+<li>Fines and replacement charges</li>
+<li>Damaged items</li>
+<li>Deals with behavioral or code of conduct issues</li>
+<li>Intervenes when patrons don’t follow rules</li>
+<li>Addresses conflicts between patrons or between patrons and staff</li>   
+</ul>
+<br>
+Develops and proposes new services or policy changes
+<ul>
+<li>Link+ implementation (working with other libraries and with the Friends Foundation for funding)</li>
+<li>Changing library card registration policy (requiring in-person ID/address verification again post-COVID)</li>
+<li>On the task force to launch the California State Library Park Pass</li>
 </ul>
 
+</p>
 </section>
 
 <section id="context">
 <h2>Professional Context</h2>
 <p>
-Ketzie received her MLIS from San Jose State University and is a member of professional organizations including ALA, CLA, and PLA.
+ Kenzie recieved her MLIS from San Jose State University and is a member of 3 professional organizations: ALA, CLA, and PLA.   
+<br>
+<br>
+For those interested in this position, Ketzie recommends taking courses in public service, information architecture, database management, and library management.
+<br>
+<br>
+
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #e6f2ff;
+}
+</style>
+
+<table>
+<tr>
+  <th>Job Postings</th>
+  <th>Journals</th>
+  <th>Forums</th>
+  <th>Professional Organizations</th>
+  <th>Conferences</th>
+</tr>
+
+<tr>
+  <td><a href="https://www.governmentjobs.com/" target="_blank">Government Jobs</a></td>
+  <td><a href="https://www.libraryjournal.com/" target="_blank">Library Journal</a></td>
+  <td><a href="https://www.reddit.com/r/librarians/" target="_blank">Reddit r/librarians</a></td>
+  <td><a href="https://callacademy.org/" target="_blank">California Libraries Learn</a></td>
+  <td><a href="https://www.placonference.org/" target="_blank">Public Library Association Conference</a></td>
+</tr>
+
+<tr>
+  <td><a href="https://joblist.ala.org/" target="_blank">ALA JobList</a></td>
+  <td><a href="https://publiclibrariesonline.org/" target="_blank">Public Libraries</a></td>
+  <td><a href="https://www.ifla.org/units/public-libraries/" target="_blank">IFLA Public Libraries Forum</a></td>
+  <td><a href="https://lfla.org/" target="_blank">Library Foundation of Los Angeles</a></td>
+  <td><a href="https://cla-net.org/page/Conference" target="_blank">California Library Association Conference</a></td>
+</tr>
+
+<tr>
+  <td><a href="https://www.lapl.org/jobs" target="_blank">LAPL Employment Opportunities</a></td>
+  <td></td>
+  <td><a href="https://discord.gg/nruFhgu6DK" target="_blank">Librarian’s Club Discord Server</a></td>
+  <td><a href="https://guides.masslibsystem.org/deescalation" target="_blank">Massachusetts Library System De-escalation Guide for Libraries</a></td>
+  <td><a href="https://www.ala.org/conferencesevents" target="_blank">ALA Conferences</a></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td><a href="https://www.library.ca.gov/services/to-libraries/" target="_blank">State of California Services for California Public Libraries</a></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td><a href="https://www.aallnet.org/lispsis/resources-publications/public-library-toolkit/" target="_blank">The American Association of Law Libraries Public Library Toolkit</a></td>
+  <td></td>
+</tr>
+
+</table>
 </p>
 </section>
 
 <section id="jobmarket">
 <h2>Job Market Outlook</h2>
 <p>
-Ketzie currently holds the classification Library Manager III within PVLD.
+At PLVD Ketzie is at the managerial level, her Classification is Library Manager III, at PVLD the managerial level is the highest level a librarian can be unless they were to transition to an upper administrative role, at the Palos Verdes Library District would there are only two roles in upper admin, the director and deputy director. 
+<br>
+<br>
+Ketzie stated that she was happy in her role at PLVD and was not currently looking for a promotion to a higher classification level within the librarian category at pvld or any other library district. However she mentioned if she did want to she would have to look at another library district. Pay at PLVD is determined by job classification level and time served, so a non managing librarian who served longer than Ketizie could potentially make more than her. 
+<br>
+<br>
+When looking at other library districts, like LAPL or Torrance Public Library there are more classifications but all seem to end at a managerial level with responsibilities and pay equivalent or similar to Ketzie’s.
+<br>
+<br>
+The role of a circulation manager is mostly a one person job made easier with the support of a team of library support staff. Jobs like Ketzie’s do not seem to be disappearing, but have remained available at a consistent rate. In terms of the job market outlook for public libraries and public librarianship in general, Ketzie feels like the field is growing not rapidly, but steadily, which matches up with the information from the U.S Bureau of Labor Statistics. 
+<br>
+<br>
+Ketzie also mentions that because of the more competitive salaries at PVLD once someone gets hired they stay until retirement, making librarian positions competitive at PVLD. She mentioned this may be different for other library districts with less competitive pay for entry level librarians.  
 </p>
 </section>
 
 <section id="skills">
 <h2>Technical Skills</h2>
-
+<p>
+<b>Technical Skills</b>
 <ul>
-<li>Microsoft 365 & Google Workspace</li>
-<li>Library databases</li>
-<li>Cataloging standards</li>
-<li>Social media proficiency</li>
+<li>Computer Proficiency (Microsoft365 & Google Workspace)*</li>
+<li>Internet functions (how to navigate search engines, websites, video conferencing and social media platforms)</li>
+<li>Language(s) (dependant on the demographics of the community, but is most often Spanish and English)</li>
+<li>e-media applications (Overdrive, Hoopla, RB Digital, and Libby)</li>
+<li>Knowledge of online library databases and services</li>
+<li>Basic statistical data knowledge and and preparation of basic statistical reports and surveys</li>
+<li>Bibliographic knowledge</li>
+<li>Cataloging standards (LCSH & MARC)</li> 
+<li>Social Media proficiency</li>
+<li>EBSCO knowledge</li>
+<br>
+*These softwares go by many different names on job descriptions. When applying, make sure to echo whatever language is used in the job ad.
 </ul>
-
+<br>
+<b>Soft Skills</b>
+<ul>
+<li>Oral communication</li> 
+<li>Written communication</li>    
+<li>Customer service skills</li>
+<li>Interpersonal skills</li>
+<li>Judgement and decision making</li>
+<li>Self-management</li>
+<li>Stress tolerance</li>
+</ul>
+<br>
+As this role is public facing, many soft skills are required, and oftentimes more important. Technical skills can be learned on the job, especially for an entry level position, so please apply to jobs even if you think you do not have complete knowedge of all the skills.
+<br>
+<br>
+<b>Market Predictions</b>
+<ol>
+<li>Multilingual - As libraries work to become more representative of the communities they serve, language skills are becoming more and more important. 
+Most jobs list multiple languages as (preferred); however, few are starting to list languages as required qualifications.</li> 
+<li>AI literacy - While many libraries have yet to integrate AI into their daily work, patrons are beginning to ask about it more and more and employees must have a baseline knowledge of different AI platforms to teach and explain to the public.</li>
+<li>Shift towards people skills over technical skills - Libraries and companies are prioritizing soft skills since approximately 80% of skills are learned on the job it's more important to have someone willing to learn and easy to collaborate with.</li>
+</ol>
+</p>
 </section>
 
 <section id="training">
 <h2>Training Agenda</h2>
 <p>
-Most librarian positions require a bachelor's degree and an MLIS from an ALA accredited school.
+Most librarian positions require greater education and relevant work experience. The minimum education required for a circulation manager position is a four year bachelor’s degree and most require a master’s in library science from an American Library Association (ALA) accredited school. This is typically 1-3 years of specialized professional education.  Ketzie recommends general courses on public services, cataloging, information architecture, database management, and library management. 
+<br>
+<br>
+Below are a few <a href="https://registrar.ucla.edu/academics/course-descriptions?search=Information+Studies" target="_blank">UCLA related graduate courses:</a>
+<br>
+<br>
+213. Current Issues in Librarianship
+<br>
+228. Assessment, Measurement, and Evaluation of Information Organizations and Services
+<br>
+233. Records and Information Resources Management
+<br>
+240. Management of Digital Records
+<br>
+245. Information Access
+<br>
+246. Information-Seeking Behavior
+<br>
+250. Techniques and Issues in Information Access
+<br>
+262A. Data Management and Practice
+<br>
+262B. Data Curation and Policy
+<br>
+274. Database Management Systems
+<br>
+410. Management Theory and Practice for Information Professionals
+<br>
+430. Library Collection Development
+<br>
+461. Descriptive Cataloging
+<br>
+462. Subject Cataloging and Classification
+<br>
+464. Metadata
+<br>
+<br>
+    She further explains that anyone who works in libraries should first work in circulation. While it is not part of any official requirement, it provides management staff a greater understanding of ground level library functions. Many job postings look for library experience in roles working with patrons to demonstrate communication and public service skills. Internships working in libraries and with metadata/cataloging would be beneficial.
+<br>
+<br>
+    The heart of library work is rooted in public services, so acting as a front-facing representative, is a crucial part of the role. The ALA explains that it is important for library managers to  work towards meeting patron and community needs. This involves the ability to exercise judgment, maintain high digital literacy, create library programming, utilize high communication skills, and effectively administratively manage projects and teams. Ketzie recommends gaining experience working with databases, catalogs, digital services, and public services. As a circulation manager, she learned institution specific skills and techniques on the job to fulfill many duties. She mentioned that her master’s in library and information science taught her general information, but her applied knowledge was learned in practice. 
+<br>
+<br>
+    Some emerging demands include the new discussions surrounding AI use in and around libraries. Specifically, Palos Verdes Peninsula Library has noticed some recent issues regarding AI use with patrons and with vendors. They have created a small task force to investigate its use and create a new policy regarding A.I. in the library. Currently, there is no mention of A.I. in its policy and procedures, leaving patrons and staff unclear on their position. This is similar to other public libraries, as its presence has grown in popularity, but its application and understanding is underdeveloped in the public library world.
+<br>
+<br>
+    The American Library Association recognizes A.I. both as an underdeveloped weapon and potential tool. First outlining its potential dangers to the data world in general, integrating knowledge from unreputable sources and reiterating harmful, offensive rhetoric as just a few examples. This still developing technology is integrating into many aspects of society and as libraries are centers of culture and knowledge, they need to create a mechanism to work within this changing technical world. One direct and growing threat to library workers are the potential  job losses to A.I. technologies. Specifically, many entry level positions, such as data entry and digital organization, may be absorbed by A.I. creating “a new vacuum in middle level management” effectively shrinking the information science job market (ALA). Conversely, A.I. use can become a constructive and effective method of digitally organizing by integrating into information databases. 
+There is also great potential behind accessing collection’s online metadata. By integrating A.I. into online catalogs, users could gain greater access to vast collection materials, both via search engine capabilities and through easier identification tools. 
+For example, the ALA explains that <a href="https://artsexperiments.withgoogle.com/lifetags/" target="_blank">LifeTag</a>
+is a google project that creates identifying tags (or markers) for life magazine photos by terms. As a circulation manager, Ketzie rarely uses A.I. currently, but with its growing popularity and implications it is important to recognise its potential effects in all aspects of the library.
 </p>
 </section>
 
 <section id="labor">
 <h2>Labor Trends</h2>
 <p>
-Library employment has seen steady growth according to labor statistics.
+<b>Library Professionals: 2025 Trends</b>
+<br>
+The ALA noticed a small increase in employment rates within the library world. According to the 
+<a href="https://www.dpeaflcio.org/factsheets/library-professionals-facts-and-figures" target="_blank">AFL-CIO Department for Professional Employees,</a>
+librarian positions increased by more than 27% while library assistants and technicians declined or remained steady. 
+<br>
+<br>
+
 </p>
 </section>
 
 <section id="resources">
 <h2>Resources</h2>
-<p>Annotated bibliography and supporting research.</p>
+<style>
+.bibliography{
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: auto;
+  color: brown;
+}
+
+.bibliography h3{
+  text-align:center;
+}
+
+.bibliography .citation{
+  margin-top:20px;
+  text-indent:-0.5in;
+  padding-left:0.5in;
+}
+
+.bibliography .annotation{
+  text-indent:0;
+  margin-top:5px;
+}
+</style>
+
+<div class="bibliography">
+
+<h3>Annotated Bibliography</h3>
+
+<p class="citation">
+American Library Association. “Artificial Intelligence.” Accessed March 14, 2026. 
+<a href="https://www.ala.org/future/trends/artificialintelligence" target="_blank">https://www.ala.org/future/trends/artificialintelligence</a>.
+</p>
+
+
+<p class="citation">
+American Library Association. “What You Need to Become a Library Manager.” Accessed March 14, 2026. 
+<a href="https://www.ala.org/educationcareers/careers/librarycareerssite/whatyouneedlibrarymgr" target="_blank">https://www.ala.org/educationcareers/careers/librarycareerssite/whatyouneedlibrarymgr</a>.
+</p>
+
+
+<p class="citation">
+Bureau of Labor Statistics, U.S. Department of Labor. “Librarians and Library Media Specialists.” 
+<i>Occupational Outlook Handbook.</i> Last modified August 28, 2025. 
+<a href="https://www.bls.gov/ooh/education-training-and-library/librarians.htm" target="_blank">
+https://www.bls.gov/ooh/education-training-and-library/librarians.htm
+</a>.
+</p>
+
+<p class="annotation">
+The Bureau of Labor Statistics, U.S. Department of Labor website provides information on labor statistics, trends and data for a variety of careers and occupations. For our project, we specifically looked at the section about Librarians and Library Media Specialists. This section explains what librarians and library media specialists do, how to become one, their work environment, typical pay, and the job outlook for the profession. It also includes a list of similar jobs as well as state and area data. This website was helpful pre-interview as it provided a thorough introduction to Ketzie’s field. We also found it useful during post-interview analysis because it provided statistical data that allowed us to compare Ketzie’s statements with national labor trends. This is an excellent and comprehensive resource for students who are interested in librarianship.
+</p>
+
+<p class="citation">
+Department for Professional Employees, AFL-CIO. “Library Professionals: Facts and Figures.” Accessed March 14, 2026. 
+<a href="https://www.dpeaflcio.org/factsheets/library-professionals-facts-and-figures" target="_blank">https://www.dpeaflcio.org/factsheets/library-professionals-facts-and-figures</a>.
+</p>
+
+
+<p class="citation">
+Eden, Bradford Lee. “Generative AI and Libraries: Claiming Our Place in the Center of a Shared Future: Michael Hanegan and Chris Rosser, ALA Editions in Collaboration with Core, 2025, Xvi+144 Pp., $54.99 (Paperback), ISBN-13 979-8-89255-310-0.” <i>Public Services Quarterly</i>, December 2025, 1–2. 
+<a href="https://doi.org/10.1080/15228959.2026.2600723" target="_blank">https://doi.org/10.1080/15228959.2026.2600723</a>.
+</p>
+
+
+<p class="citation">
+Ettarh, Fobazi. “Vocational Awe and Librarianship: The Lies We Tell Ourselves.” 
+<i>In the Library with the Lead Pipe</i>, January 10, 2018. 
+<a href="https://www.inthelibrarywiththeleadpipe.org/2018/vocational-awe/" target="_blank">
+https://www.inthelibrarywiththeleadpipe.org/2018/vocational-awe/
+</a>.
+</p>
+
+<p class="annotation">
+This article by librarian Fobazi Ettarh introduces the concept of vocational awe, the idea that because libraries are viewed as inherently good institutions, those who work there must be noble individuals motivated by the greater good. As a result, library workers may feel pressure to accept being overworked and underpaid. This article helped us analyze labor trends in public libraries by providing a conceptual framework that explains why issues such as burnout and low retention rates may exist in library work.
+</p>
+
+<p class="citation">
+Ford, Anne. “The Library Employment Landscape.” <i>American Libraries</i> 52, no. 5 (2021): 34–37. 
+<a href="https://www.jstor.org/stable/27110269" target="_blank">
+https://www.jstor.org/stable/27110269
+</a>.
+</p>
+
+<p class="annotation">
+This article by American Libraries editor Anne Ford details how the COVID-19 pandemic negatively affected the job market for those looking for entry-level library positions. Through personal anecdotes and testimonies of LIS professionals, the article shows how the pandemic cut hiring in half, halted internship opportunities for MLIS students, and forced many job seekers to relocate or leave the LIS field entirely. This article provided a fuller perspective on the current difficulties of librarianship and LIS work, a perspective we did not fully receive from our interview with Ketzie since she has been a manager for twelve years and entered the profession earlier. For these same reasons, this article would be informative for MLIS students and early LIS professionals.
+</p>
+
+<p class="citation">
+Google Arts & Culture Lab. “Life Tags.” Accessed March 14, 2026. 
+<a href="https://artsexperiments.withgoogle.com/lifetags/" target="_blank">https://artsexperiments.withgoogle.com/lifetags/</a>.
+</p>
+
+
+<p class="citation">
+Jaeger, Paul T. “Diversity, Inclusion, and Library and Information Science: An Ongoing Imperative (or Why We Still Desperately Need to Have Discussions about Diversity and Inclusion).” <i>Library Quarterly</i> 85, no. 2 (2015): 127–132. 
+<a href="https://www.jstor.org/stable/10.1086/680151" target="_blank">https://www.jstor.org/stable/10.1086/680151</a>.
+</p>
+
+
+<p class="citation">
+Koziura, Amanda, and Amy Tureen. “Disrupting Vocational Awe: Strategies for Supervisors to Identify, Counter, and Prevent Unsustainable Workloads and Unreasonable Expectations.” In <i>Person-Centered Management in Academic Libraries</i>, edited by Dani Brecher Cook, Maoria J. Kirker, and Diann Smothers, 131–140. Chicago: ALA Editions, 2024.
+</p>
+
+<p class="annotation">
+This book chapter examines the concept of vocational awe in academic libraries and focuses on supervisors and managers. The authors argue that librarians in leadership roles can make structural changes within their departments and institutions that address the poor working conditions caused by vocational awe. The chapter includes practical strategies supervisors can implement to improve workplace conditions. This source was particularly helpful because it focuses on librarians in managerial roles similar to Ketzie’s position. Although it is primarily aimed at supervisors rather than LIS students, it still provides useful insight for students entering the workforce who may eventually move into leadership roles.
+</p>
+
+<p class="citation">
+Palos Verdes Library District. “Circulation Department Manager.” Accessed March 14, 2026. 
+<a href="https://www.pvld.org/jobs/circulation/circulationdepartmentmanager" target="_blank">
+https://www.pvld.org/jobs/circulation/circulationdepartmentmanager
+</a>.
+</p>
+
+<p class="annotation">
+This website is the Palos Verdes Library District’s Human Resources page. We examined the job description for the circulation manager position, which is Ketzie’s current role. The page includes information about the purpose of a circulation manager and descriptions of essential duties such as management and leadership, customer service, circulation operations, and administrative support. It also outlines required qualifications including education, knowledge, and abilities, as well as sections describing physical demands, environmental elements, and working conditions. This source was extremely helpful in the pre-interview research stage because it provides a comprehensive view of Ketzie’s position within her institution. It would also be useful for students interested in public librarianship because similar job descriptions for other library positions are available on the site.
+</p>
+
+</div>
 </section>
 
 <section id="presentation">
 <h2>Our Presentation</h2>
-
-<div style="position: relative; width: 100%; padding-top: 56.25%;">
-<iframe src="https://www.canva.com/design/DAHDxue4gAQ/xna4LNOsRDfKZ-QJQvrwXQ/view?embed"
-style="position:absolute;width:100%;height:100%;top:0;left:0;border:none;">
-</iframe>
+<p>
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAHDxue4gAQ/xna4LNOsRDfKZ-QJQvrwXQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
 </div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAHDxue4gAQ&#x2F;xna4LNOsRDfKZ-QJQvrwXQ&#x2F;view?utm_content=DAHDxue4gAQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">270 Final Presentation</a> by Aliya Gomaa
+</p>
+</section>
 
 </section>
 
 <section id="interview">
-
-<h2>Interview Process</h2>
-
+<h2>Interveiw Process</h2>
 <p>
 Ketzie asked for us not to share the transcript & recording of her interview; however, we've created a timeline to illustrate our process as well as a sampling of the questions we asked Ketzie.
-</p>
 
-<img src="timeline.png" alt="Interview timeline" class="timeline-img">
+<img src="timeline.png" alt="Interview timeline; pink background with black text" width="500" height="600">
 
 <b>Interview Questions:</b>
-
+<br>
+<br>
 <ol>
-<li>What is your official title and how would you describe it?</li>
-<li>What responsibilities fall under your position?</li>
+<li>What is your official title and how would you describe that to someone outside your field?</li>
+<li>What responsibilities fall under your position</li> 
 <li>How did you get started in the field?</li>
 <li>How long have you worked at PVLD?</li>
-<li>Were you always interested in public libraries?</li>
-<li>What skills are required for this role?</li>
-<li>How has AI impacted your work?</li>
+<li>Were you always interested in working in public libraries?</li>
+<li>Is a niche background crucial in this job market, or is it more advantageous to be more well rounded?</li>
+<li>If you weren’t a circulation manager/ librarian what kind of librarian LIS professional would you be?</li> 
+<li>In what ways are you engaging with the public?</li> 
+<li>What questions are you commonly asked/ fielding?</li>
+<li>What are some new items/materials/collections you are working with?</li>
+<li>What is your day to day like?</li> 
+<li>How often are you working alone versus collaborating with peers?</li> 
+<li>How often are you collaborating with professionals outside of your library?</li> 
+<li>How often are you collaborating with individuals outside of LIS Professions?</li>
+<li>What is the hierarchical structure of your department?</li>
+<li>Is it hard to get things approved through the chain of command? What does that process look like?</li>
+<li>Do you find that there is room for growth within the organization or do you typically have to shift for career advancement?</li> 
+<li>Are you a member of any professional organizations?</li> 
+<li>Do you attend conferences? If so, what kind and how often?</li>
+<li>Do you think a specialization/tailored course work in a MLIS program is needed or crucial for work as a public librarian/circulation manager?</li>
+<li>Did you take any courses that you think really prepared you for your current role?</li> 
+<li>What is the most difficult/ hallenging part of this position? Do you have particular examples?</li>
+<li>What kind of skills are needed for this position?</li>
+<li>Do you think there will be a change in what skills are needed? If so, what new or emerging skills are important for Circulation Managers?</li>
+<li>What skills outside of the LIS profession are needed/ most important/most used?</li>
+<li>Where do you think you developed the skills needed for this position?</li>
+<li>Do you feel like AI has had a big impact on your job? If so, how?</li> 
+<li>If not, why do you think it hasn’t had much of an impact?</li>
+<li>Do you see AI affecting your job/day to day in the future? How about your industry as a whole?</li>
+<li>Does the use of AI in other information professions affect how you do your work?</li>
 </ol>
-
+</p>
 </section>
 
 <section id="about-us">
-
 <h2>About Us</h2>
+
+<p>A little bit about us and our contributions to this website. Obviously we are humans, but these animals sure are cute.
+</p>
 
 <div class="about-grid">
 
 <figure>
-<img src="suzy.png">
+<img src="suzy.png" alt="cat resting on couch">
 <figcaption>Aliya Gomaa</figcaption>
+<br>
+<body>
+Reached out and interviewed Ketzie Diaz
+<br>
+Formulated interview questions
+<br>
+Designed Canva template for in class presentation
+<br>
+Researched & wrote Overview, Job Market Outlook, and Resources sections 
+</body>
 </figure>
 
 <figure>
-<img src="neo.png">
+<img src="neo.png" alt="cat resting on orange suitcase">
 <figcaption>Amanda Clark</figcaption>
+<br>
+<body>
+Reached out to possible interview contacts
+<br>
+Formulated interview questions
+<br>
+Researched & wrote Technical Skills section 
+<br>
+Created, designed, and formatted the GitHub
+</body>
 </figure>
 
 <figure>
-<img src="ruby.png">
+<img src="ruby.png" alt="black lab resting on bed">
 <figcaption>Emma Cameron</figcaption>
+<br>
+<body>
+Formulated interview questions
+<br>
+Researched and wrote Typical Tasks and Professional Context sections
+</body>
 </figure>
 
 <figure>
-<img src="puppy.png">
+<img src="puppy.png" alt="puppy with big ears posing and looking at camera">
 <figcaption>Patricia Alvarado</figcaption>
+<br>
+<body>
+Formulated interview questions 
+<br>
+Researched and wrote Training Agenda, AI integration, and Labor Trends sections
+</body>
 </figure>
 
 </div>
