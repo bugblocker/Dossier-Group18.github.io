@@ -114,6 +114,19 @@ margin-top: 5px;
 }
 
 /* About Us image grid */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.about-grid figure {
+    text-align: center;
+    margin: 0;
+}
+
 .about-grid img {
     width: 250px;
     height: 250px;
@@ -123,7 +136,6 @@ margin-top: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* hover effect */
 .about-grid img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px #ff66cc, 0 0 30px #ff99dd;
