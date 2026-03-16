@@ -10,105 +10,105 @@ html{
 scroll-behavior:smooth;
 }
 
-body{
-background-color:#ffd6e7;
-font-family:Arial, sans-serif;
-margin:0;
-color:brown;
+body {
+    background-color: #ffd6e7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: brown;
 }
 
 /* Header */
 
-header{
-background-color:#5bb6e6;
-text-align:center;
-padding:30px;
-position:relative;
-color:brown;
+header {
+    background-color: #5bb6e6;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    color: brown;
 }
 
 /* Fancy animated title */
 
-.fancy-title{
-font-size:40px;
-font-weight:bold;
-background:linear-gradient(90deg,#ff00ff,#ff66ff,#ff00ff);
-background-size:300%;
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-animation:shimmer 3s infinite linear, glow 2s infinite alternate;
+.fancy-title {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff00ff, #ff66ff, #ff00ff);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s infinite linear, glow 2s infinite alternate;
 }
 
-@keyframes shimmer{
-0%{background-position:-200%;}
-100%{background-position:200%;}
+@keyframes shimmer {
+    0% {background-position: -200%;}
+    100% {background-position: 200%;}
 }
 
-@keyframes glow{
-from{text-shadow:0 0 5px #ff00ff,0 0 10px #ff66ff;}
-to{text-shadow:0 0 15px #ff00ff,0 0 25px #ff66ff;}
+@keyframes glow {
+    from {text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff66ff;}
+    to {text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff66ff;}
 }
 
 /* Sparkles */
 
-.sparkle{
-position:absolute;
-width:6px;
-height:6px;
-background:white;
-border-radius:50%;
-animation:sparkleMove 4s infinite;
+.sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    animation: sparkleMove 4s infinite;
 }
 
-.sparkle:nth-child(1){top:20%;left:30%;animation-delay:0s;}
-.sparkle:nth-child(2){top:40%;left:60%;animation-delay:1s;}
-.sparkle:nth-child(3){top:70%;left:40%;animation-delay:2s;}
-.sparkle:nth-child(4){top:50%;left:20%;animation-delay:3s;}
+.sparkle:nth-child(1) { top:20%; left:30%; animation-delay:0s; }
+.sparkle:nth-child(2) { top:40%; left:60%; animation-delay:1s; }
+.sparkle:nth-child(3) { top:70%; left:40%; animation-delay:2s; }
+.sparkle:nth-child(4) { top:50%; left:20%; animation-delay:3s; }
 
-@keyframes sparkleMove{
-0%{opacity:0;transform:scale(0);}
-50%{opacity:1;transform:scale(1.5);}
-100%{opacity:0;transform:scale(0);}
+@keyframes sparkleMove {
+    0% {opacity:0; transform:scale(0);}
+    50% {opacity:1; transform:scale(1.5);}
+    100% {opacity:0; transform:scale(0);}
 }
 
-/* Sticky navigation bar */
+/* Sticky navigation */
 
-.navbar{
-background-color:#3a9fd1;
-display:flex;
-justify-content:center;
-align-items:center;
-gap:10px;
-flex-wrap:nowrap;
-position:sticky;
-top:0;
-z-index:1000;
-overflow-x:auto;
+.navbar {
+    background-color: #3a9fd1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    overflow-x: auto;
 }
 
-.navbar a{
-color:white;
-padding:12px 14px;
-text-decoration:none;
-font-weight:bold;
-white-space:nowrap;
-transition:background-color 0.25s, transform 0.15s;
+.navbar a {
+    color: white;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background-color 0.25s, transform 0.15s;
 }
 
-.navbar a:hover{
-background-color:#2c7fa8;
-transform:translateY(-2px);
+.navbar a:hover {
+    background-color: #2c7fa8;
+    transform: translateY(-2px);
 }
 
-/* Section cards */
+/* Sections */
 
-section{
-background:white;
-margin:30px auto;
-padding:25px;
-width:80%;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.15);
+section {
+    background: white;
+    margin: 30px auto;
+    padding: 25px;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* Timeline image */
@@ -121,29 +121,25 @@ margin:20px auto;
 border-radius:8px;
 }
 
-/* Subtitle and team names */
+/* Subtitle */
 
-.subtitle{
-font-size:20px;
-margin-top:10px;
-margin-bottom:5px;
+.subtitle {
+    font-size: 20px;
+    margin-top: 10px;
 }
 
-.team-names{
+.team-names {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.class-name {
 font-size:16px;
-font-style:italic;
-margin-top:5px;
-margin-bottom:5px;
 }
 
-.class-name{
-font-size:16px;
-margin-top:5px;
-}
+/* About grid */
 
-/* About Us grid */
-
-.about-grid{
+.about-grid {
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:25px;
@@ -162,66 +158,14 @@ height:250px;
 object-fit:cover;
 border-radius:50%;
 border:4px solid #ff66cc;
-transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.about-grid figcaption{
-margin-top:10px;
-font-size:15px;
-font-weight:bold;
-}
-
-/* Footer */
 
 footer{
 background-color:#3a9fd1;
 color:white;
 text-align:center;
-padding:15px 10px;
-margin-top:auto;
-font-size:14px;
-}
-
-/* Tables */
-
-table{
-border-collapse:collapse;
-width:100%;
-text-align:center;
-}
-
-th,td{
-border:1px solid black;
-padding:8px;
-}
-
-tr:nth-child(even){
-background-color:#e6f2ff;
-}
-
-/* Bibliography */
-
-.bibliography{
-font-family:Arial,sans-serif;
-line-height:1.6;
-max-width:800px;
-margin:auto;
-color:brown;
-}
-
-.bibliography h3{
-text-align:center;
-}
-
-.bibliography .citation{
-margin-top:20px;
-text-indent:-0.5in;
-padding-left:0.5in;
-}
-
-.bibliography .annotation{
-text-indent:0;
-margin-top:5px;
+padding:15px;
+margin-top:40px;
 }
 
 </style>
@@ -258,6 +202,82 @@ margin-top:5px;
 <a href="#about-us">About Us</a>
 </div>
 
+<section id="overview">
+<h2>Overview</h2>
+<p>
+For our project we interviewed Ketzie Diaz, the Circulation Manager at the Peninsula Center branch of the Palos Verdes Library District (PVLD). She manages 22 employees responsible for circulation services including checkouts, book drops, shelving, and helping patrons sign up for library cards.
+</p>
+</section>
+
+<section id="tasks">
+<h2>Typical Tasks</h2>
+
+<ul>
+<li>Help patrons check out items</li>
+<li>Issue library cards</li>
+<li>Resolve account issues</li>
+<li>Empty book drops</li>
+<li>Reshelve materials</li>
+</ul>
+
+</section>
+
+<section id="context">
+<h2>Professional Context</h2>
+<p>
+Ketzie received her MLIS from San Jose State University and is a member of professional organizations including ALA, CLA, and PLA.
+</p>
+</section>
+
+<section id="jobmarket">
+<h2>Job Market Outlook</h2>
+<p>
+Ketzie currently holds the classification Library Manager III within PVLD.
+</p>
+</section>
+
+<section id="skills">
+<h2>Technical Skills</h2>
+
+<ul>
+<li>Microsoft 365 & Google Workspace</li>
+<li>Library databases</li>
+<li>Cataloging standards</li>
+<li>Social media proficiency</li>
+</ul>
+
+</section>
+
+<section id="training">
+<h2>Training Agenda</h2>
+<p>
+Most librarian positions require a bachelor's degree and an MLIS from an ALA accredited school.
+</p>
+</section>
+
+<section id="labor">
+<h2>Labor Trends</h2>
+<p>
+Library employment has seen steady growth according to labor statistics.
+</p>
+</section>
+
+<section id="resources">
+<h2>Resources</h2>
+<p>Annotated bibliography and supporting research.</p>
+</section>
+
+<section id="presentation">
+<h2>Our Presentation</h2>
+
+<div style="position: relative; width: 100%; padding-top: 56.25%;">
+<iframe src="https://www.canva.com/design/DAHDxue4gAQ/xna4LNOsRDfKZ-QJQvrwXQ/view?embed"
+style="position:absolute;width:100%;height:100%;top:0;left:0;border:none;">
+</iframe>
+</div>
+
+</section>
+
 <section id="interview">
 
 <h2>Interview Process</h2>
@@ -266,42 +286,49 @@ margin-top:5px;
 Ketzie asked for us not to share the transcript & recording of her interview; however, we've created a timeline to illustrate our process as well as a sampling of the questions we asked Ketzie.
 </p>
 
-<img src="timeline.png" alt="Interview timeline; pink background with black text" class="timeline-img">
+<img src="timeline.png" alt="Interview timeline" class="timeline-img">
 
 <b>Interview Questions:</b>
 
 <ol>
-<li>What is your official title and how would you describe that to someone outside your field?</li>
-<li>What responsibilities fall under your position</li>
+<li>What is your official title and how would you describe it?</li>
+<li>What responsibilities fall under your position?</li>
 <li>How did you get started in the field?</li>
 <li>How long have you worked at PVLD?</li>
-<li>Were you always interested in working in public libraries?</li>
-<li>Is a niche background crucial in this job market, or is it more advantageous to be more well rounded?</li>
-<li>If you weren’t a circulation manager/ librarian what kind of librarian LIS professional would you be?</li>
-<li>In what ways are you engaging with the public?</li>
-<li>What questions are you commonly asked/ fielding?</li>
-<li>What are some new items/materials/collections you are working with?</li>
-<li>What is your day to day like?</li>
-<li>How often are you working alone versus collaborating with peers?</li>
-<li>How often are you collaborating with professionals outside of your library?</li>
-<li>How often are you collaborating with individuals outside of LIS Professions?</li>
-<li>What is the hierarchical structure of your department?</li>
-<li>Is it hard to get things approved through the chain of command?</li>
-<li>Do you find that there is room for growth within the organization?</li>
-<li>Are you a member of any professional organizations?</li>
-<li>Do you attend conferences?</li>
-<li>Do you think specialization in MLIS programs is needed?</li>
-<li>Did you take any courses that prepared you for your current role?</li>
-<li>What is the most difficult part of this position?</li>
-<li>What kind of skills are needed?</li>
-<li>Do you think skills requirements will change?</li>
-<li>What skills outside LIS are important?</li>
-<li>Where did you develop the skills needed?</li>
-<li>Has AI impacted your job?</li>
-<li>If not, why not?</li>
-<li>Do you see AI affecting your job in the future?</li>
-<li>Does AI in other professions affect your work?</li>
+<li>Were you always interested in public libraries?</li>
+<li>What skills are required for this role?</li>
+<li>How has AI impacted your work?</li>
 </ol>
+
+</section>
+
+<section id="about-us">
+
+<h2>About Us</h2>
+
+<div class="about-grid">
+
+<figure>
+<img src="suzy.png">
+<figcaption>Aliya Gomaa</figcaption>
+</figure>
+
+<figure>
+<img src="neo.png">
+<figcaption>Amanda Clark</figcaption>
+</figure>
+
+<figure>
+<img src="ruby.png">
+<figcaption>Emma Cameron</figcaption>
+</figure>
+
+<figure>
+<img src="puppy.png">
+<figcaption>Patricia Alvarado</figcaption>
+</figure>
+
+</div>
 
 </section>
 
