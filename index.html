@@ -78,26 +78,38 @@ background-color:#3a9fd1;
 display:flex;
 justify-content:center;
 align-items:center;
-gap:10px;
+gap:8px;
 flex-wrap:nowrap;
 position:sticky;
 top:0;
 z-index:1000;
 overflow-x:auto;
+padding:6px 10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.2);
 }
 
 .navbar a{
 color:white;
-padding:12px 14px;
+padding:12px 16px;
 text-decoration:none;
 font-weight:bold;
 white-space:nowrap;
-transition:background-color 0.25s, transform 0.15s;
+border-radius:6px;
+transition:all .25s ease;
 }
 
 .navbar a:hover{
 background-color:#2c7fa8;
 transform:translateY(-2px);
+}
+
+.navbar a:active{
+transform:translateY(0);
+}
+
+.navbar a:focus{
+outline:3px solid white;
+outline-offset:2px;
 }
 
 /* Section cards */
@@ -109,6 +121,7 @@ padding:25px;
 width:80%;
 border-radius:12px;
 box-shadow:0 4px 10px rgba(0,0,0,0.15);
+scroll-margin-top:80px;
 }
 
 /* Timeline image */
@@ -244,7 +257,7 @@ margin-top:5px;
 
 </header>
 
-<div class="navbar">
+<nav class="navbar" aria-label="Main navigation">
 <a href="#overview">Overview</a>
 <a href="#tasks">Typical Tasks</a>
 <a href="#context">Professional Context</a>
@@ -256,7 +269,7 @@ margin-top:5px;
 <a href="#presentation">Our Presentation</a>
 <a href="#interview">Interview Process</a>
 <a href="#about-us">About Us</a>
-</div>
+</nav>
 
 <section id="overview">
 <h2>Overview</h2>
