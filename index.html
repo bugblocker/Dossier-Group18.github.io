@@ -28,6 +28,7 @@ header {
     margin-left: 220px; /* same as sidebar width */
 }
 
+
 /* Fancy animated title */
 
 .fancy-title {
@@ -126,28 +127,28 @@ body > footer {
 
 /* Section cards */
 
-section{
-background:white;
-margin:30px auto;
-padding:25px;
-width:80%;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.15);
-scroll-margin-top:80px;
+section {
+    background: white;
+    margin: 30px auto;
+    padding: 25px;
+    width: calc(80% - 220px);  /* shrink width to account for sidebar */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    scroll-margin-top: 80px;
 }
 
 /* Timeline image */
 
-.timeline-img{
-    width:70%;
-    max-width:700px;
-    height:auto;
-    display:block;
-    margin:20px auto;
-    border-radius:12px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.25);  /* subtle shadow */
-    background-color:#ffe6f0;                 /* soft pink background behind the image */
-    padding:10px;                             /* padding so background shows around edges */
+.timeline-img {
+    width: 70%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    background-color: #ffe6f0;
+    padding: 10px;
 }
 
 /* Subtitle and team names */
@@ -171,13 +172,12 @@ margin-top:5px;
 }
 
 /* About Us grid */
-
-.about-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-justify-items:center;
-margin-top:20px;
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive */
+    gap: 25px;
+    justify-items: center;
+    margin-top: 20px;
 }
 
 .about-grid figure{
@@ -202,13 +202,14 @@ font-weight:bold;
 
 /* Footer */
 
-footer{
-background-color:#3a9fd1;
-color:white;
-text-align:center;
-padding:15px 10px;
-margin-top:auto;
-font-size:14px;
+footer {
+    background-color: #3a9fd1;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: auto;
+    font-size: 14px;
+    margin-left: 220px; /* shift for sidebar */
 }
 
 /* Tables */
@@ -230,12 +231,12 @@ background-color:#e6f2ff;
 
 /* Bibliography */
 
-.bibliography{
-font-family:Arial,sans-serif;
-line-height:1.6;
-max-width:800px;
-margin:auto;
-color:brown;
+.bibliography {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: calc(800px - 220px);
+    margin: auto;
+    color: brown;
 }
 
 .bibliography h3{
