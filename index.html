@@ -9,7 +9,7 @@ body {
     background-color: #ffd6e7;
     font-family: Arial, sans-serif;
     margin: 0;
-    color: brown; /* All text default to brown */
+    color: brown;
 }
 
 /* Header */
@@ -18,27 +18,25 @@ header {
     text-align: center;
     padding: 30px;
     position: relative;
-    color: brown; /* Header text (subtitle & team names) brown */
+    color: brown;
 }
 
 /* Fancy animated title */
 .fancy-title {
     font-size: 40px;
     font-weight: bold;
-    background: linear-gradient(90deg, #ff00ff, #ff66ff, #ff00ff); /* neon pink gradient */
+    background: linear-gradient(90deg, #ff00ff, #ff66ff, #ff00ff);
     background-size: 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shimmer 3s infinite linear, glow 2s infinite alternate;
 }
 
-/* Shimmer animation */
 @keyframes shimmer {
     0% {background-position: -200%;}
     100% {background-position: 200%;}
 }
-    
-/* Glow animation for neon pink shimmer */
+
 @keyframes glow {
     from {text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff66ff;}
     to {text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff66ff;}
@@ -109,10 +107,35 @@ section {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-    
+
 .class-name {
 font-size: 16px;
 margin-top: 5px;
+}
+
+/* About Us image grid */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.about-grid figure {
+    text-align: center;
+}
+
+.about-grid img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-grid figcaption {
+    margin-top: 8px;
+    font-size: 14px;
 }
 
 /* Footer */
@@ -121,10 +144,9 @@ footer {
     color: white;
     text-align: center;
     padding: 15px 10px;
-    margin-top: auto; /* pushes footer to bottom */
+    margin-top: auto;
     font-size: 14px;
 }
-    
 </style>
 
 </head>
@@ -156,7 +178,7 @@ footer {
 <a href="#labor">Labor Trends</a>
 <a href="#resources">Resources</a>
 <a href="#presentation">Our Presentation</a>
-<a href="#about us">About Us<a/>
+<a href="#about-us">About Us</a>
 </div>
 
 <section id="overview">
@@ -494,15 +516,35 @@ This website is the Palos Verdes Library District’s Human Resources page. We e
 </p>
 </section>
 
-<section id="about us">
+<section id="about-us">
 <h2>About Us</h2>
-<p>who we are and what we did.
-<img src="suzy.png" alt="cat resting on couch" width="300" height="300">
-<img src="neo.png" alt="cat resting on orange suitcase" width="300" height="300">
-<img src="ruby.png" alt="black lab resting on bed" width="300" height="300">
-<img src="puppy.png" alt="puppy with big ears posing and looking at camera" width="300" height="300">
 
-</p>
+<p>Who we are and what we did.</p>
+
+<div class="about-grid">
+
+<figure>
+<img src="suzy.png" alt="cat resting on couch">
+<figcaption>Aliya</figcaption>
+</figure>
+
+<figure>
+<img src="neo.png" alt="cat resting on orange suitcase">
+<figcaption>Amanda</figcaption>
+</figure>
+
+<figure>
+<img src="ruby.png" alt="black lab resting on bed">
+<figcaption>Emma</figcaption>
+</figure>
+
+<figure>
+<img src="puppy.png" alt="puppy with big ears posing and looking at camera">
+<figcaption>Patricia</figcaption>
+</figure>
+
+</div>
+
 </section>
 
 <footer>
