@@ -19,24 +19,26 @@ color:brown;
 
 /* Header */
 
-header{
-background-color:#5bb6e6;
-text-align:center;
-padding:30px;
-position:relative;
-color:brown;
+header {
+    background-color: #5bb6e6;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    color: brown;
+    margin-left: 220px; /* same as sidebar width */
 }
 
 /* Fancy animated title */
 
-.fancy-title{
-font-size:40px;
-font-weight:bold;
-background:linear-gradient(90deg,#ff00ff,#ff66ff,#ff00ff);
-background-size:300%;
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-animation:shimmer 3s infinite linear, glow 2s infinite alternate;
+.fancy-title {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff00ff, #ff66ff, #ff00ff);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s infinite linear, glow 2s infinite alternate;
+    display: inline-block; /* makes centering more reliable */
 }
 
 @keyframes shimmer{
@@ -51,19 +53,19 @@ to{text-shadow:0 0 15px #ff00ff,0 0 25px #ff66ff;}
 
 /* Sparkles */
 
-.sparkle{
-position:absolute;
-width:6px;
-height:6px;
-background:white;
-border-radius:50%;
-animation:sparkleMove 4s infinite;
+.sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    animation: sparkleMove 4s infinite;
 }
 
-.sparkle:nth-child(1){top:20%;left:30%;animation-delay:0s;}
-.sparkle:nth-child(2){top:40%;left:60%;animation-delay:1s;}
-.sparkle:nth-child(3){top:70%;left:40%;animation-delay:2s;}
-.sparkle:nth-child(4){top:50%;left:20%;animation-delay:3s;}
+.sparkle:nth-child(1) { top: 20%; left: calc(30% + 220px); animation-delay: 0s; }
+.sparkle:nth-child(2) { top: 40%; left: calc(60% + 220px); animation-delay: 1s; }
+.sparkle:nth-child(3) { top: 70%; left: calc(40% + 220px); animation-delay: 2s; }
+.sparkle:nth-child(4) { top: 50%; left: calc(20% + 220px); animation-delay: 3s; }
 
 @keyframes sparkleMove{
 0%{opacity:0;transform:scale(0);}
